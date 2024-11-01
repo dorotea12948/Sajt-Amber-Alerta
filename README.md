@@ -1,2 +1,2 @@
-# Sajt-Amber-Alerta
-dodin sajt amber alerta
+# Dodin-sajt-Amber-alerta
+Ok ovo mora biti kidanje
