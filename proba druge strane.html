@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista sa nestalima</title>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 40%;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+
+        .gallery {
+            display: flex;
+            gap: 20px; /* Razmak između kartica */
+            justify-content: center; /* Centriraj kartice po sredini */
+            padding: 20px;
+        }
+
+        .card img {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .header {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h1, h2 {
+            color: red;
+            background-color: #ffcc00;
+            padding: 10px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>AMBER ALERT SRBIJA</h1>
+    <h2>STRANA SA NESTALIMA</h2>
+</div>
+
+<div class="gallery">
+    <div class="card">
+        <img src="slike/skica_osobe.jpg" alt="Ime i prezime osobe" style="width:100%">
+        <div class="container">
+            <h4><b>Ime i prezime nestale osobe</b></h4>
+            <p>Grad odakle je i mesto nestanka (grad ili možda i preciznije)</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
