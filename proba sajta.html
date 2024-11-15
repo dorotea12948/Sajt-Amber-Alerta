@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amber Alert Srbija</title>
+    <link rel="stylesheet" href="dorotea.css" />
+    <script src="dorotea.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #ffcc00;
+            color: black;
+            text-align: center;
+            padding: 16px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 500px;
+            background-color: #ccc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 32px auto;
+            padding: 16px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #ffcc00;
+            border: none;
+            padding: 1rem;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #e6b800;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .button:hover {
+            background-color: #e6b800;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Amber Alert Srbija</h1>
+    </header>
+
+    <div class="container">
+        <h2>Prijava nestale osobe</h2>
+        <form id="reportForm">
+            <label for="name">Ime nestale osobe:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="surname">Prezime nestale osobe:</label>
+            <input type="text" id="surname" name="surname" required />
+
+            <label for="info">Informacije o nestanku:</label>
+            <input type="text" id="info" name="info" required />
+
+            <label for="city">Grad:</label>
+            <input type="text" id="city" name="city" required />
+
+            <label for="description">Opis nestale osobe:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <label for="image">Slika ili priblizna skica nestale osobe:</label>
+            <input type="file" id="image" name="image" accept="image/*" required />
+
+            <button type="submit">Pošaljite prijavu</button>
+        </form>
+        <a href="doroteab.html" class="button">Lista nestalih osoba</a>
+        <button onclick="clearStorage()">Ocisti storage</button>
+    </div>
+
+    <div id="map"></div>
+
+    <script>
+        function startLoad() {
+            console.log("Stranica je učitana!");
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<div id="map" style="width: 100%; height: 500px;"></div>
+<script>
+	var map = L.map('map').setView([44.0165, 21.0059], 7);
+
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    	attribution: 'Map data © <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+	var markersLayer = new L.LayerGroup();
+	map.addLayer(markersLayer);
+
+	function onMapClick(e) {
+    	var marker = L.marker(e.latlng).addTo(markersLayer);
+    	
+	}
+
+	map.on('click', onMapClick);
+</script>
+
+</body>
+        }
+    </script>
+</body>
+</html>
