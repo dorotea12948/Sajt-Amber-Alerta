@@ -1,3 +1,4 @@
+let peopleList;
 function savePerson() {
   const ime = document.getElementById("name").value;
   const prezime = document.getElementById("surname").value;
@@ -17,14 +18,14 @@ function savePerson() {
       slika: reader.result,
     };
 
-    let peopleList = JSON.parse(localStorage.getItem("peopleList")) || [];
+    peopleList = JSON.parse(localStorage.getItem("peopleList")) || [];
     peopleList.push(newPerson);
     localStorage.setItem("peopleList", JSON.stringify(peopleList));
 
     console.log("Nova osoba je dodata u listu.");
   };
   reader.readAsDataURL(slika);
-  startLoad();
+
 }
 function loadPeople() {
   const peopleList = JSON.parse(localStorage.getItem("peopleList")) || [];
@@ -39,9 +40,12 @@ function loadPeople() {
 }
 function clearStorage() {
   localStorage.clear();
+  startLoad()
 }
 var map;
+
 function load() {
+  if (map != undefined) { map.remove(); } 
   map = L.map("map").setView([44.7866, 20.4489], 7);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 18,
@@ -87,6 +91,13 @@ function showAllPeopleOnMap() {
     addPersonToMap(person);
   });
 }
+
+function startLoad() {
+  load();
+  loadPeople();
+  showAllPeopleOnMap();
+}
+
 
 function startLoad() {
   load();
