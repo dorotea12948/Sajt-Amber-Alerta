@@ -2,10 +2,10 @@ function loadPeople1() {
     const peopleList = JSON.parse(localStorage.getItem("peopleList")) || [];
     const gallery = document.querySelector(".gallery");
 
-    if (peopleList.length === 0) {
+    if (peopleList.length === 0) 
         gallery.innerHTML = "<p>Nema prijavljenih osoba.</p>";
         return;
-    }
+    
     console.log(peopleList);
     let content = "<div class='row'>";
     peopleList.forEach((person, index) => {
